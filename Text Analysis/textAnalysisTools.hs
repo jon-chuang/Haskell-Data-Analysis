@@ -34,8 +34,8 @@ guessAuthor nTotal trainingData table toGuess =
 guessAuthor' :: Int -> [Int] -> [(Int, [Int])] -> [[Double]] -> Int -> Int
 guessAuthor' nTotal range trainingData table toGuess =
   fst $ maximumBy (comparing $ mean . L.map meanOverNgrams . snd ) trainingData
-  where meanOverNgrams = (\x -> mean $ L.map
-          (\ngramNo -> ((table !! (ngramNo - 1)) !!  (nTotal * toGuess + x)) ) range )
+  where meanOverNgrams = mean $ L.map
+          (\ngramNo -> ((table !! (ngramNo - 1)) !!  (nTotal * toGuess + x)) range)
 
 ---------------------------- Stateful Pre-processing -----------------------------
 
