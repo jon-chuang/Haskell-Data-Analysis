@@ -8,7 +8,7 @@ import System.Directory
 
 import TextAnalysisTools
 {-
-A program which clusters text files based on their word-frequency cosine similarity
+This is a program which classifies text files based on their word-frequency cosine similarity
 or tfidf CS wrt existing groups of classified traning data.
 
 Please place your text files in folders named Data/Training and Data/Testing
@@ -19,6 +19,8 @@ Alternatively, you can use the insertCat tool to do the insertion for you
 by passing in the following parameters to the main method in
 insertCat.hs from the command line:
 <Directory name> <# of files for training> <# of files for testing>
+Here, <directory name> is the name of the parent folder containing folders of text files.
+Each folder in this parent folder should contain the text files of one category.
 -}
 
 main = do
