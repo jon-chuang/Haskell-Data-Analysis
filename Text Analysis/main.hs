@@ -8,7 +8,7 @@ import System.Directory
 
 import TextAnalysisTools
 {-
-A program which clusters text files based on their word-frequency cosine similarity
+This is a program which classifies text files based on their word-frequency cosine similarity
 or tfidf CS wrt existing groups of classified traning data.
 
 Please place your text files in folders named Data/Training and Data/Testing
