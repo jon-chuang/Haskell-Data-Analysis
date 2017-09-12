@@ -19,6 +19,9 @@ Alternatively, you can use the insertCat tool to do the insertion for you
 by passing in the following parameters to the main method in
 insertCat.hs from the command line:
 <Directory name> <# of files for training> <# of files for testing>
+
+Documents of different categories should be placed in their respective folders in the
+parent directory.
 -}
 
 main = do
