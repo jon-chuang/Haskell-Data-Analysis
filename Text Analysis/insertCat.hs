@@ -32,9 +32,9 @@ appendToTopTest nTrain nTest n dir = do
                        getDirectoryContents dir
   mapM_ (transformFile "Testing/" dir n) (take nTest $ drop nTrain fileNames)
 
-transformFile tOrT dir n fileName = do
+transformFile trainOrTest dir n fileName = do
   contents <- readFile ((dir ++ "/") ++ fileName)
-  let newFilePath = "Data/" ++ tOrT ++ fileName
+  let newFilePath = "Data/" ++ trainOrTest ++ fileName
   print ((head $ lines contents) ++ " @ " ++ fileName)
   let newContents = show n ++ "\n" ++ contents
   writeFile (newFilePath) newContents    
