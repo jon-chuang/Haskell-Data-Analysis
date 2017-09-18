@@ -28,7 +28,7 @@ appendToTopTrain nTrain n dir = do
 
 
 appendToTopTest nTrain nTest n dir = do
-  fileNames <- fmap (reverse . init . init) $
+  fileNames <- fmap (reverse . (filter (\x -> (x/=".") && (x/=".."))) $
                        getDirectoryContents dir
   mapM_ (transformFile "Testing/" dir n) (take nTest $ drop nTrain fileNames)
 
