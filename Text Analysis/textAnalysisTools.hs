@@ -121,5 +121,5 @@ parMap' :: (a -> b) -> [a] -> Eval [b]
 parMap' f [] = return []
 parMap' f (a:as) = do
   b <- rpar (f a)
-  bs <-ty[o parMap' f as
+  bs <- parMap' f as
   return (b:bs)
